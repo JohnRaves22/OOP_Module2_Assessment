@@ -35,7 +35,7 @@ class _dashboard_screenState extends State<dashboard_screen> {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: const BorderRadius.all(const Radius.circular(30)),
+                borderRadius: const BorderRadius.all(const Radius.circular(40)),
               ),
               ),
           ),
@@ -51,13 +51,91 @@ class _dashboard_screenState extends State<dashboard_screen> {
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.black,
-                  borderRadius: const BorderRadius.all(const Radius.circular(30)),
+                  borderRadius: const BorderRadius.all(const Radius.circular(25)),
                 ),
               ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top:130, left:320),
+            child: Text(
+              "VISA", 
+              style: GoogleFonts.montserrat(textStyle: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.normal, 
+                fontStyle: FontStyle.italic,
+                color: Colors.white, 
+                ),
+            ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top:130, left:50),
+            child: Text(
+              "5234 6543 **** 6514", 
+              style: GoogleFonts.montserrat(textStyle: TextStyle(
+                fontSize: 20, 
+                fontWeight: FontWeight.normal, 
+                fontStyle: FontStyle.normal,
+                color: Colors.white, 
+                ),
+            ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top:190, left:50),
+            child: Text(
+              "Balance", 
+              style: GoogleFonts.montserrat(textStyle: TextStyle(
+                fontSize: 12, 
+                fontWeight: FontWeight.normal, 
+                fontStyle: FontStyle.normal,
+                color: Colors.white, 
+                ),
+            ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top:210, left:50),
+            child: Text(
+              "\$ 100,000", 
+              style: GoogleFonts.montserrat(textStyle: TextStyle(
+                fontSize: 25, 
+                fontWeight: FontWeight.normal, 
+                fontStyle: FontStyle.normal,
+                color: Colors.white, 
+                ),
+            ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top:280, left:50),
+            child: Text(
+              "Name", 
+              style: GoogleFonts.montserrat(textStyle: TextStyle(
+                fontSize: 12, 
+                fontWeight: FontWeight.normal, 
+                fontStyle: FontStyle.normal,
+                color: Colors.white, 
+                ),
+            ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top:300, left:50),
+            child: Text(
+              "Juan Dela Cruz", 
+              style: GoogleFonts.montserrat(textStyle: TextStyle(
+                fontSize: 25, 
+                fontWeight: FontWeight.normal, 
+                fontStyle: FontStyle.normal,
+                color: Colors.white, 
+                ),
+            ),
+            ),
+          ),
+          
         ]
-
       ),
       drawer: Drawer(
         backgroundColor: Colors.black,
