@@ -1,3 +1,4 @@
+import 'package:androidstudio_projects/dummy_transfermoney_screen.dart';
 import 'package:androidstudio_projects/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -144,13 +145,19 @@ class _dashboard_screenState extends State<dashboard_screen> {
           child: ListView(
             children: [
               ListTile(
-                  title: Text("Transfer Money",
-                      style: GoogleFonts.montserrat(
-                          textStyle: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white,
-                      )))),
+                title: Text("Transfer Money",
+                    style: GoogleFonts.montserrat(
+                        textStyle: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.white,
+                            ))
+                            ),
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => dummy_transfermoney_screen()));
+                },
+              ),
               ListTile(
                 title: Text("Logout",
                     style: GoogleFonts.montserrat(
@@ -158,12 +165,13 @@ class _dashboard_screenState extends State<dashboard_screen> {
                             fontSize: 20,
                             fontWeight: FontWeight.normal,
                             color: Colors.white,
-                            ))),
+                            ))
+                            ),
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => login_screen()));
                 },
-              )
+              ),
             ],
           ),
         ),

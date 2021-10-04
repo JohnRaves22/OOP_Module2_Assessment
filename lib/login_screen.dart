@@ -13,6 +13,8 @@ class _login_screenState extends State<login_screen> {
 
   TextEditingController passInputController = new TextEditingController();
 
+  final loginAuthenticate = SnackBar(content: Text('Invalid credentials.'));
+
   String userValue = "", passValue = "";
 
   @override
@@ -31,32 +33,30 @@ class _login_screenState extends State<login_screen> {
             ),
             SizedBox(height: 25),
             TextField(
-              style: TextStyle(color: Colors.white),
               controller: userInputController,
               decoration: InputDecoration(
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color:Colors.black)
-                ),
-                border: OutlineInputBorder(), 
+                enabledBorder: OutlineInputBorder(), 
                 labelText: "Username"),
             ),
             SizedBox(height: 10),
             TextField(
               controller: passInputController,
               decoration: InputDecoration(
-                fillColor: Colors.white,
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color:Colors.black)
-                ),
-                border: OutlineInputBorder(),
-                labelText: "Password",
-              ),
-            cursorColor: Colors.white,
+                enabledBorder: OutlineInputBorder(), 
+                labelText: "Password"),
             ),
             SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>dashboard_screen()));
+                setState(() {
+                  userValue = userInputController.text;
+                  passValue = passInputController.text;
+                  if(userValue=="admin"&&passValue=="admin"){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>dashboard_screen()));
+                  }else{
+                    ScaffoldMessenger.of(context).showSnackBar(loginAuthenticate);
+                  }
+                });
               },
               child: Text("LOGIN"),
               style: ElevatedButton.styleFrom(

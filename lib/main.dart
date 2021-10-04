@@ -1,4 +1,3 @@
-import 'package:androidstudio_projects/dashboard_screen.dart';
 import 'package:androidstudio_projects/login_screen.dart';
 import 'package:flutter/material.dart';
 
