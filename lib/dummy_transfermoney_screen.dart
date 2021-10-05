@@ -1,3 +1,4 @@
+import 'package:androidstudio_projects/dashboard_screen.dart';
 import 'package:androidstudio_projects/total_balance.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,11 @@ class _dummy_transfermoney_screenState extends State<dummy_transfermoney_screen>
             },
             child: Text("Confirm"),
           ),
-          Text(total_balance.toString())
+          ElevatedButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => dashboard_screen()));
+            }
+          , child: Text("back"))
         ],
       ),
     );

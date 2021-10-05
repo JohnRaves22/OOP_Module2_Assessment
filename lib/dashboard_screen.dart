@@ -2,6 +2,7 @@ import 'package:androidstudio_projects/dummy_transfermoney_screen.dart';
 import 'package:androidstudio_projects/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:androidstudio_projects/total_balance.dart';
 
 class dashboard_screen extends StatefulWidget {
   const dashboard_screen({Key? key}) : super(key: key);
@@ -99,7 +100,7 @@ class _dashboard_screenState extends State<dashboard_screen> {
           Padding(
             padding: const EdgeInsets.only(top:210, left:50),
             child: Text(
-              "\$ 100,000", 
+              "\$"+" $total_balance", 
               style: GoogleFonts.montserrat(textStyle: TextStyle(
                 fontSize: 25, 
                 fontWeight: FontWeight.normal, 
